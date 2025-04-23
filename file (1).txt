@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet Vétérinaire Mouroujveto - Dr Trad Mohamed Nizar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            transition: opacity 0.3s ease-in-out; /* Smooth transition for language switch */
+        }
+        /* Base styles for languages */
+        .lang-fr, .lang-ar {
+             display: inline; /* Default display */
+        }
+        /* Hide elements not matching the current language */
+        html[lang="fr"] .lang-ar { display: none; }
+        html[lang="ar"] .lang-fr { display: none; }
+        /* Ensure block elements behave correctly when switched */
+         html[lang="ar"] p.lang-ar, html[lang="ar"] h2.lang-ar, html[lang="ar"] h3.lang-ar, html[lang="ar"] h4.lang-ar, html[lang="ar"] div.lang-ar, html[lang="ar"] li.lang-ar {
+             display: block;
+        }
+         html[lang="fr"] p.lang-fr, html[lang="fr"] h2.lang-fr, html[lang="fr"] h3.lang-fr, html[lang="fr"] h4.lang-fr, html[lang="fr"] div.lang-fr, html[lang="fr"] li.lang-fr {
+             display: block;
+        }
+        /* Arabic Font and alignment */
+        [lang="ar"], html[dir="rtl"] .lang-ar {
+            font-family: 'Cairo', sans-serif;
+            text-align: right;
+        }
+         /* Specific alignment for block Arabic text */
+         html[dir="rtl"] p, html[dir="rtl"] h2, html[dir="rtl"] h3, html[dir="rtl"] h4, html[dir="rtl"] div, html[dir="rtl"] li, html[dir="rtl"] ul, html[dir="rtl"] footer {
+             text-align: right;
+         }
+         /* Ensure lists align right in RTL */
+         html[dir="rtl"] ul {
+            padding-right: 1.5rem; /* Adjust based on original ml-5 */
+            padding-left: 0;
+         }
+          html[dir="rtl"] .list-disc {
+             list-style-position: inside; /* Better control for RTL */
+         }
+
+        /* Keep other styles from previous version */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://content.osgnetworks.tv/gundog/content/photos/english-pointer-pointing-in-field.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-bg {
+            background-color: #f0f9ff;
+        }
+        .vaccine-card, .toxic-food-card {
+            transition: transform 0.3s ease;
+        }
+        .vaccine-card:hover, .toxic-food-card:hover {
+            transform: translateY(-5px);
+        }
+        .handwritten-text {
+            font-family: 'Segoe Script', 'Brush Script MT', cursive;
+            color: white;
+            line-height: 1.5;
+            font-size: 1.1rem;
+        }
+         html[dir="rtl"] .handwritten-text {
+            font-family: 'Cairo', cursive; /* Use Cairo for Arabic handwritten */
+            font-size: 1.2rem;
+         }
+        .contact-highlight {
+            border: 2px solid #3182ce;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+         /* RTL icon and margin adjustments */
+        html[dir="rtl"] .fas { margin-left: 0.5rem; margin-right: 0; }
+        html[dir="rtl"] .mr-2 { margin-right: 0 !important; margin-left: 0.5rem !important; }
+        html[dir="rtl"] .ml-2 { margin-left: 0 !important; margin-right: 0.5rem !important; }
+        html[dir="rtl"] .mr-3 { margin-right: 0 !important; margin-left: 0.75rem !important; }
+        html[dir="rtl"] .ml-3 { margin-left: 0 !important; margin-right: 0.75rem !important; }
+        html[dir="rtl"] .mr-4 { margin-right: 0 !important; margin-left: 1rem !important; }
+        html[dir="rtl"] .ml-4 { margin-left: 0 !important; margin-right: 1rem !important; }
+        html[dir="rtl"] .pr-0 { padding-right: 0 !important; }
+        html[dir="rtl"] .pl-0 { padding-left: 0 !important; }
+        html[dir="rtl"] .pr-6 { padding-right: 0 !important; padding-left: 1.5rem !important; }
+        html[dir="rtl"] .pl-6 { padding-left: 0 !important; padding-right: 1.5rem !important; }
+        html[dir="rtl"] .pr-8 { padding-right: 0 !important; padding-left: 2rem !important; }
+        html[dir="rtl"] .pl-8 { padding-left: 0 !important; padding-right: 2rem !important; }
+        html[dir="rtl"] .ml-5 { margin-left: 0 !important; margin-right: 1.25rem !important; }
+        html[dir="rtl"] .border-l-4 { border-left-width: 0 !important; border-right-width: 4px !important; }
+        html[dir="rtl"] .border-r-4 { border-right-width: 0 !important; border-left-width: 4px !important; }
+         /* Spacing in flex/grid */
+        html[dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]) { margin-right: 0.5rem; margin-left: 0; }
+        html[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) { margin-right: 1rem; margin-left: 0; }
+        html[dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-right: 1.5rem; margin-left: 0; }
+         /* Ensure flex directions are handled if necessary (though Tailwind usually does this) */
+        html[dir="rtl"] .flex-row { flex-direction: row-reverse; }
+        html[dir="rtl"] .md\:flex-row { flex-direction: row-reverse; }
+         /* Text alignment needs to be forced for some Tailwind contexts */
+         html[dir="rtl"] .text-center { text-align: center; }
+         html[dir="rtl"] .text-left { text-align: right; } /* Swap left/right */
+         html[dir="rtl"] .text-right { text-align: left; } /* Swap left/right */
+         html[dir="rtl"] .md\:text-left { text-align: right; }
+         html[dir="rtl"] .md\:text-right { text-align: left; }
+
+        /* Language switcher style */
+        .lang-switcher button {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid white;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .lang-switcher button:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+        .lang-switcher button.active {
+            background-color: white;
+            color: #1e3a8a; /* blue-900 */
+            font-weight: bold;
+        }
+        /* Ensure switcher isn't printed */
+        @media print {
+           .no-print { display: none !important; }
+         }
+
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-blue-900 text-white py-4 sticky top-0 z-50 shadow-md no-print">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-paw text-3xl mr-2 ml-2"></i>
+                <span class="text-xl font-bold">
+                    <span class="lang-fr">Cabinet Mouroujveto</span>
+                    <span class="lang-ar" lang="ar" dir="rtl">عيادة المروج</span>
+                </span>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                 <a href="#accueil" class="hover:text-blue-200"><span class="lang-fr">Accueil</span><span class="lang-ar" lang="ar" dir="rtl">الرئيسية</span></a>
+                <a href="#expertise" class="hover:text-blue-200"><span class="lang-fr">Expertise</span><span class="lang-ar" lang="ar" dir="rtl">خبرتنا</span></a>
+                <a href="#services" class="hover:text-blue-200"><span class="lang-fr">Services</span><span class="lang-ar" lang="ar" dir="rtl">خدماتنا</span></a>
+                <a href="#vaccinations" class="hover:text-blue-200"><span class="lang-fr">Vaccinations</span><span class="lang-ar" lang="ar" dir="rtl">التلاقيح</span></a>
+                <a href="#aliments-toxiques" class="hover:text-blue-200"><span class="lang-fr">Aliments toxiques</span><span class="lang-ar" lang="ar" dir="rtl">الأطعمة السامة</span></a>
+                <a href="#conseils" class="hover:text-blue-200"><span class="lang-fr">Conseils</span><span class="lang-ar" lang="ar" dir="rtl">نصائح</span></a>
+                <a href="#contact" class="hover:text-blue-200"><span class="lang-fr">Contact</span><span class="lang-ar" lang="ar" dir="rtl">اتصل بنا</span></a>
+                 <div class="lang-switcher space-x-2 border-l border-blue-700 pl-4 ml-4">
+                    <button data-lang="fr" class="lang-button active">FR</button>
+                    <button data-lang="ar" class="lang-button">AR</button>
+                </div>
+            </div>
+            <div class="md:hidden flex items-center">
+                 <div class="lang-switcher space-x-2 mr-4">
+                    <button data-lang="fr" class="lang-button active">FR</button>
+                    <button data-lang="ar" class="lang-button">AR</button>
+                </div>
+                <button id="menu-toggle" class="focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden px-4 pt-2 pb-4 md:hidden">
+            <a href="#accueil" class="block py-2 hover:text-blue-200"><span class="lang-fr">Accueil</span><span class="lang-ar" lang="ar" dir="rtl">الرئيسية</span></a>
+            <a href="#expertise" class="block py-2 hover:text-blue-200"><span class="lang-fr">Expertise</span><span class="lang-ar" lang="ar" dir="rtl">خبرتنا</span></a>
+            <a href="#services" class="block py-2 hover:text-blue-200"><span class="lang-fr">Services</span><span class="lang-ar" lang="ar" dir="rtl">خدماتنا</span></a>
+            <a href="#vaccinations" class="block py-2 hover:text-blue-200"><span class="lang-fr">Vaccinations</span><span class="lang-ar" lang="ar" dir="rtl">التلاقيح</span></a>
+            <a href="#aliments-toxiques" class="block py-2 hover:text-blue-200"><span class="lang-fr">Aliments toxiques</span><span class="lang-ar" lang="ar" dir="rtl">الأطعمة السامة</span></a>
+            <a href="#conseils" class="block py-2 hover:text-blue-200"><span class="lang-fr">Conseils</span><span class="lang-ar" lang="ar" dir="rtl">نصائح</span></a>
+            <a href="#contact" class="block py-2 hover:text-blue-200"><span class="lang-fr">Contact</span><span class="lang-ar" lang="ar" dir="rtl">اتصل بنا</span></a>
+        </div>
+    </nav>
+
+    <section id="accueil" class="hero-section text-white py-32">
+        <div class="container mx-auto px-4 text-center">
+            <p class="handwritten-text max-w-2xl mx-auto mb-8">
+                <span class="lang-fr">Votre cabinet vétérinaire de confiance à El Mourouj, avec Dr Trad, véto passionné depuis l'enfance, dédié à la médecine canine / féline, et à la recherche, inventeur primé avec plusieurs brevets et membre de l'Association Tunisienne de la Recherche Scientifique.</span>
+                <span class="lang-ar" lang="ar" dir="rtl">عيادتكم البيطرية الموثوقة في المروج، بإدارة الدكتور طراد، طبيب بيطري شغوف منذ الطفولة، مكرس لطب الكلاب والقطط، والبحث العلمي، مخترع متحصل على عدة براءات اختراع وعضو في الجمعية التونسية للبحث العلمي.</span>
+            </p>
+            <div class="mt-10">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300 inline-block mr-4 ml-4">
+                    <span class="lang-fr">Contactez-nous</span>
+                    <span class="lang-ar" lang="ar" dir="rtl">اتصل بنا</span>
+                </a>
+                <a href="#services" class="bg-transparent hover:bg-blue-700 text-white border border-white hover:border-transparent font-bold py-3 px-6 rounded-full text-lg transition duration-300 inline-block">
+                     <span class="lang-fr">Nos services</span>
+                     <span class="lang-ar" lang="ar" dir="rtl">خدماتنا</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
+                <span class="lang-fr">Notre Expertise</span>
+                <span class="lang-ar" lang="ar" dir="rtl">خبرتنا</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 text-4xl mb-4 text-center"><i class="fas fa-search-plus"></i></div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">
+                        <span class="lang-fr">Diagnostic précis</span>
+                        <span class="lang-ar" lang="ar" dir="rtl">تشخيص دقيق</span>
+                    </h3>
+                    <p class="text-gray-700">
+                        <span class="lang-fr">Approche basée sur plusieurs années d'expérience clinique et l'utilisation des technologies les plus avancées en intelligence artificielle.</span>
+                        <span class="lang-ar" lang="ar" dir="rtl">نهج يعتمد على سنوات عديدة من الخبرة السريرية واستخدام أحدث التقنيات في الذكاء الاصطناعي.</span>
+                    </p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 text-4xl mb-4 text-center"><i class="fas fa-lightbulb"></i></div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">
+                        <span class="lang-fr">Innovation et brevets</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">ابتكار وبراءات اختراع</span>
+                    </h3>
+                    <p class="text-gray-700">
+                         <span class="lang-fr">Inventeur de plusieurs outils médicaux brevetés, le Dr Trad propose des solutions innovantes pour améliorer les soins vétérinaires et le bien-être animal. Pour soutenir notre approche innovante abonnez vous à nos pages sur facebook <a href="https://www.facebook.com/share/16LRYNKCHZ/" target="_blank" class="text-blue-600 hover:underline">Singratec arabic</a> et <a href="https://www.facebook.com/share/1Bg9cJ2d3j/" target="_blank" class="text-blue-600 hover:underline">Singratec</a>, dédiées à nos inventions et bien sûr abonnez vous à la page du <a href="https://www.facebook.com/share/12LTT2coBrj/" target="_blank" class="text-blue-600 hover:underline">Cabinet Mouroujveto</a></span>
+                         <span class="lang-ar" lang="ar" dir="rtl">كمخترع لعدة أدوات طبية حاصلة على براءة اختراع، يقدم الدكتور طراد حلولاً مبتكرة لتحسين الرعاية البيطرية ورفاهية الحيوان. لدعم نهجنا المبتكر، اشتركوا في صفحاتنا على فيسبوك <a href="https://www.facebook.com/share/16LRYNKCHZ/" target="_blank" class="text-blue-600 hover:underline">Singratec arabic</a> و <a href="https://www.facebook.com/share/1Bg9cJ2d3j/" target="_blank" class="text-blue-600 hover:underline">Singratec</a> المخصصة لاختراعاتنا وبالطبع اشتركوا في صفحة <a href="https://www.facebook.com/share/12LTT2coBrj/" target="_blank" class="text-blue-600 hover:underline">عيادة المروج البيطرية</a>.</span>
+                    </p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                     <div class="text-blue-600 text-4xl mb-4 text-center"><i class="fas fa-robot"></i></div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">
+                        <span class="lang-fr">Intégration de l'IA</span>
+                        <span class="lang-ar" lang="ar" dir="rtl">دمج الذكاء الاصطناعي</span>
+                    </h3>
+                    <p class="text-gray-700">
+                        <span class="lang-fr">Grâce à notre approche accès sur l'innovation, notre cabinet a été pionnier dans l'utilisation des dernières technologies basées sur l'intelligence artificielle, afin de garantir les meilleurs résultats cliniques.</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">بفضل نهجنا المرتكز على الابتكار، كانت عيادتنا رائدة في استخدام أحدث التقنيات القائمة على الذكاء الاصطناعي لضمان أفضل النتائج السريرية.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="mt-12 bg-blue-100 p-6 rounded-lg">
+                <h3 class="text-xl font-bold mb-4 text-blue-800">
+                    <span class="lang-fr">À propos du Dr Trad Mohamed Nizar</span>
+                    <span class="lang-ar" lang="ar" dir="rtl">حول الدكتور طراد محمد نزار</span>
+                </h3>
+                 <div class="flex flex-col md:flex-row">
+                    <div class="md:w-2/3 pr-0 md:pr-6 md:pl-6">
+                        <p class="text-gray-700 mb-4">
+                            <span class="lang-fr">Diplômé de l'École Nationale de Médecine Vétérinaire, le Dr Trad combine expertise clinique et innovation technologique dans sa pratique quotidienne. Sa passion pour l'amélioration constante des soins vétérinaires l'a conduit à développer plusieurs inventions brevetées.</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">خريج المدرسة الوطنية للطب البيطري، يجمع الدكتور طراد بين الخبرة السريرية والابتكار التكنولوجي في ممارسته اليومية. شغفه بالتحسين المستمر للرعاية البيطرية دفعه إلى تطوير العديد من الاختراعات الحاصلة على براءات اختراع.</span>
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            <span class="lang-fr">En plus de son activité au cabinet, il est également impliqué dans Singratec, où il développe des solutions innovantes pour le secteur vétérinaire et de la santé animale.</span>
+                             <span class="lang-ar" lang="ar" dir="rtl">بالإضافة إلى عمله في العيادة، يشارك أيضًا في Singratec، حيث يطور حلولًا مبتكرة للقطاع البيطري وصحة الحيوان.</span>
+                        </p>
+                        <p class="text-gray-700">
+                            <span class="lang-fr">Son approche diagnostique unique combine l'expertise traditionnelle et les technologies de pointe pour assurer les meilleurs soins possibles à vos animaux de compagnie.</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">نهجه التشخيصي الفريد يجمع بين الخبرة التقليدية والتقنيات المتقدمة لضمان أفضل رعاية ممكنة لحيواناتكم الأليفة.</span>
+                        </p>
+                    </div>
+                    <div class="md:w-1/3 mt-4 md:mt-0 flex items-center justify-center">
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                            <div class="text-6xl text-blue-600">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                             <div class="mt-3">
+                                <p class="font-bold text-blue-800">
+                                    <span class="lang-fr">Dr Trad Mohamed Nizar</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">دكتور طراد محمد نزار</span>
+                                </p>
+                                <p class="text-sm text-gray-600">
+                                    <span class="lang-fr">Médecin Vétérinaire</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">طبيب بيطري</span>
+                                </p>
+                                <p class="text-sm text-gray-600">
+                                     <span class="lang-fr">Inventeur breveté</span>
+                                     <span class="lang-ar" lang="ar" dir="rtl">مخترع حاصل على براءات اختراع</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 section-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-4">
+                <span class="lang-fr">Nos Services</span>
+                 <span class="lang-ar" lang="ar" dir="rtl">خدماتنا</span>
+            </h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                <span class="lang-fr">Nous nous concentrons sur l'excellence en médecine préventive, diagnostique et thérapeutique pour vos animaux de compagnie.</span>
+                 <span class="lang-ar" lang="ar" dir="rtl">نركز على التميز في الطب الوقائي والتشخيصي والعلاجي لحيواناتكم الأليفة.</span>
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 text-3xl mb-4 text-center"><i class="fas fa-stethoscope"></i></div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">
+                        <span class="lang-fr">Consultations et examens</span>
+                        <span class="lang-ar" lang="ar" dir="rtl">استشارات وفحوصات</span>
+                    </h3>
+                    <p class="text-gray-700">
+                        <span class="lang-fr">Consultations complètes avec examen clinique approfondi pour évaluer l'état de santé général de votre animal et détecter d'éventuels problèmes.</span>
+                        <span class="lang-ar" lang="ar" dir="rtl">استشارات شاملة مع فحص سريري معمق لتقييم الحالة الصحية العامة لحيوانك وكشف أي مشاكل محتملة.</span>
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 text-3xl mb-4 text-center"><i class="fas fa-syringe"></i></div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">
+                        <span class="lang-fr">Vaccinations</span>
+                        <span class="lang-ar" lang="ar" dir="rtl">التلاقيح</span>
+                    </h3>
+                    <p class="text-gray-700">
+                        <span class="lang-fr">Programmes de vaccination personnalisés pour protéger votre animal contre les maladies infectieuses courantes et dangereuses.</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">برامج تلاقيح مخصصة لحماية حيوانك من الأمراض المعدية الشائعة والخطيرة.</span>
+                    </p>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md">
+                     <div class="text-blue-600 text-3xl mb-4 text-center"><i class="fas fa-pills"></i></div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">
+                        <span class="lang-fr">Traitements efficaces</span>
+                        <span class="lang-ar" lang="ar" dir="rtl">علاجات فعالة</span>
+                    </h3>
+                    <p class="text-gray-700">
+                        <span class="lang-fr">Protocoles thérapeutiques basés sur les preuves scientifiques et personnalisés pour chaque patient, avec suivi d'efficacité.</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">بروتوكولات علاجية قائمة على الأدلة العلمية ومخصصة لكل مريض، مع متابعة الفعالية.</span>
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 text-3xl mb-4 text-center"><i class="fas fa-bug"></i></div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">
+                        <span class="lang-fr">Traitement antiparasitaire</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">علاج الطفيليات</span>
+                    </h3>
+                    <p class="text-gray-700">
+                        <span class="lang-fr">Protection contre les parasites internes et externes avec des produits sélectionnés pour leur efficacité et leur sécurité.</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">حماية ضد الطفيليات الداخلية والخارجية بمنتجات مختارة لفعاليتها وسلامتها.</span>
+                    </p>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md">
+                     <div class="text-blue-600 text-3xl mb-4 text-center"><i class="fas fa-network-wired"></i></div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">
+                        <span class="lang-fr">Réseau de référence</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">شبكة الإحالة</span>
+                    </h3>
+                    <p class="text-gray-700">
+                        <span class="lang-fr">Nous collaborons avec un réseau de vétérinaires spécialisés afin de vous garantir un accès rapide aux examens complémentaires nécessaires et services médicaux les plus sophistiqués. Ceci afin de vous permettre de jouir des solutions les plus adéquates en termes de chirurgie spécialisé, urgences, hospitalisation ou même toilettage.</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">نتعاون مع شبكة من الأطباء البيطريين المتخصصين لضمان وصولكم السريع إلى الفحوصات التكميلية اللازمة والخدمات الطبية الأكثر تطورًا. وهذا لتمكينكم من الاستفادة من الحلول الأنسب من حيث الجراحة المتخصصة، الطوارئ، الاستشفاء أو حتى العناية والنظافة.</span>
+                   </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section id="vaccinations" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-4">
+                <span class="lang-fr">Vaccinations essentielles</span>
+                <span class="lang-ar" lang="ar" dir="rtl">التلاقيح الأساسية</span>
+            </h2>
+             <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                <span class="lang-fr">La vaccination est un élément clé de la médecine préventive chez les animaux de compagnie. Voici les principales maladies contre lesquelles nous protégeons vos compagnons.</span>
+                 <span class="lang-ar" lang="ar" dir="rtl">التلقيح عنصر أساسي في الطب الوقائي للحيوانات الأليفة. إليك الأمراض الرئيسية التي نحمي رفاقكم منها.</span>
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="vaccine-card bg-yellow-50 p-6 rounded-lg shadow-md">
+                     <div class="flex items-center mb-4">
+                        <i class="fas fa-dog text-yellow-600 text-3xl mr-3 ml-3"></i>
+                        <h3 class="text-xl font-bold text-yellow-800">
+                             <span class="lang-fr">Pour les chiens</span>
+                             <span class="lang-ar" lang="ar" dir="rtl">للكلاب</span>
+                         </h3>
+                    </div>
+                    <ul class="text-gray-700 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-yellow-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Maladie de Carré :</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">مرض ديستمبر:</span>
+                                </span>
+                                <span class="lang-fr">Infection virale hautement contagieuse et souvent mortelle</span>
+                                <span class="lang-ar" lang="ar" dir="rtl">عدوى فيروسية شديدة العدوى وغالباً ما تكون قاتلة</span>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-yellow-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Parvovirose :</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">بارفوڤيروس:</span>
+                                </span>
+                                <span class="lang-fr">Maladie virale très contagieuse affectant l'appareil digestif</span>
+                                <span class="lang-ar" lang="ar" dir="rtl">مرض فيروسي شديد العدوى يصيب الجهاز الهضمي</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-yellow-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Hépatite de Rubarth :</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">التهاب الكبد المعدي:</span>
+                                </span>
+                                <span class="lang-fr">Maladie virale affectant le foie</span>
+                                <span class="lang-ar" lang="ar" dir="rtl">مرض فيروسي يصيب الكبد</span>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-yellow-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Leptospirose :</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">داء البريميات:</span>
+                                </span>
+                                <span class="lang-fr">Infection bactérienne transmissible à l'homme</span>
+                                <span class="lang-ar" lang="ar" dir="rtl">عدوى بكتيرية يمكن أن تنتقل إلى الإنسان</span>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-yellow-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Rage :</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">داء الكلب:</span>
+                                </span>
+                                <span class="lang-fr">Maladie virale mortelle transmissible à l'homme (obligatoire)</span>
+                                <span class="lang-ar" lang="ar" dir="rtl">مرض فيروسي قاتل يمكن أن ينتقل إلى الإنسان (إلزامي)</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="vaccine-card bg-blue-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cat text-blue-600 text-3xl mr-3 ml-3"></i>
+                        <h3 class="text-xl font-bold text-blue-800">
+                            <span class="lang-fr">Pour les chats</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">للقطط</span>
+                        </h3>
+                    </div>
+                     <ul class="text-gray-700 space-y-2">
+                        <li class="flex items-start">
+                             <i class="fas fa-shield-alt text-blue-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Typhus félin :</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">التيفوس السنوري:</span>
+                                </span>
+                                <span class="lang-fr">Infection virale très contagieuse et souvent mortelle</span>
+                                <span class="lang-ar" lang="ar" dir="rtl">عدوى فيروسية شديدة العدوى وغالباً ما تكون قاتلة</span>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-blue-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Coryza :</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">زكام القطط:</span>
+                                </span>
+                                <span class="lang-fr">Syndrome respiratoire causé par plusieurs virus</span>
+                                <span class="lang-ar" lang="ar" dir="rtl">متلازمة تنفسية تسببها عدة فيروسات</span>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-blue-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Leucose féline (FeLV) :</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">لوكيميا القطط (FeLV):</span>
+                                </span>
+                                <span class="lang-fr">Maladie virale affectant le système immunitaire</span>
+                                <span class="lang-ar" lang="ar" dir="rtl">مرض فيروسي يصيب جهاز المناعة</span>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-blue-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Chlamydiose :</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">الكلاميديا:</span>
+                                </span>
+                                <span class="lang-fr">Infection bactérienne affectant principalement les yeux</span>
+                                <span class="lang-ar" lang="ar" dir="rtl">عدوى بكتيرية تصيب العينين بشكل رئيسي</span>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-blue-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Rage :</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">داء الكلب:</span>
+                                </span>
+                                <span class="lang-fr">Maladie virale mortelle transmissible à l'homme</span>
+                                <span class="lang-ar" lang="ar" dir="rtl">مرض فيروسي قاتل يمكن أن ينتقل إلى الإنسان</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="vaccine-card bg-green-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-calendar-alt text-green-600 text-3xl mr-3 ml-3"></i>
+                        <h3 class="text-xl font-bold text-green-800">
+                            <span class="lang-fr">Calendrier vaccinal</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">جدول التلاقيح</span>
+                        </h3>
+                    </div>
+                    <div class="text-gray-700 space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-green-700">
+                                <span class="lang-fr">Chiots</span>
+                                <span class="lang-ar" lang="ar" dir="rtl">الجراء</span>
+                            </h4>
+                            <ul class="list-disc ml-5 mr-5 mt-1">
+                                <li><span class="lang-fr">La première primovaccination à partir de l'âge de 6 semaines.</span><span class="lang-ar" lang="ar" dir="rtl">التلقيح الأولي الأول ابتداءً من عمر 6 أسابيع.</span></li>
+                                <li><span class="lang-fr">Deuxième injection : Maximum un mois après</span><span class="lang-ar" lang="ar" dir="rtl">الحقنة الثانية: بعد شهر واحد على الأكثر</span></li>
+                                <li><span class="lang-fr">Rage : à partir de 3 mois</span><span class="lang-ar" lang="ar" dir="rtl">داء الكلب: ابتداءً من 3 أشهر</span></li>
+                                <li><span class="lang-fr">Rappel annuel</span><span class="lang-ar" lang="ar" dir="rtl">تذكير سنوي</span></li>
+                            </ul>
+                        </div>
+                         <div>
+                            <h4 class="font-semibold text-green-700">
+                                <span class="lang-fr">Chatons</span>
+                                <span class="lang-ar" lang="ar" dir="rtl">القطط الصغيرة</span>
+                            </h4>
+                            <ul class="list-disc ml-5 mr-5 mt-1">
+                                <li><span class="lang-fr">Premier Primo vaccination à partir de l'âge de 2 mois</span><span class="lang-ar" lang="ar" dir="rtl">التلقيح الأولي الأول ابتداءً من عمر شهرين</span></li>
+                                <li><span class="lang-fr">Deuxième injection : Maximum un mois après</span><span class="lang-ar" lang="ar" dir="rtl">الحقنة الثانية: بعد شهر واحد على الأكثر</span></li>
+                                <li><span class="lang-fr">Rage : à partir de 3 mois</span><span class="lang-ar" lang="ar" dir="rtl">داء الكلب: ابتداءً من 3 أشهر</span></li>
+                                <li><span class="lang-fr">Rappel annuel</span><span class="lang-ar" lang="ar" dir="rtl">تذكير سنوي</span></li>
+                            </ul>
+                        </div>
+                        <p class="text-sm italic mt-2">
+                             <span class="lang-fr">Un programme personnalisé sera établi en fonction de l'âge, du mode de vie et des risques spécifiques de votre animal.</span>
+                             <span class="lang-ar" lang="ar" dir="rtl">سيتم وضع برنامج مخصص بناءً على عمر حيوانك ونمط حياته والمخاطر الخاصة به.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aliments-toxiques" class="py-16 section-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-4">
+                <span class="lang-fr">Aliments toxiques pour animaux</span>
+                <span class="lang-ar" lang="ar" dir="rtl">الأطعمة السامة للحيوانات</span>
+            </h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                 <span class="lang-fr">Certains aliments consommés régulièrement par les humains peuvent être dangereux, voire mortels pour vos animaux de compagnie. Voici une liste d'aliments à éviter absolument.</span>
+                 <span class="lang-ar" lang="ar" dir="rtl">بعض الأطعمة التي يستهلكها البشر بانتظام يمكن أن تكون خطيرة، بل وقاتلة لحيواناتكم الأليفة. إليك قائمة بالأطعمة التي يجب تجنبها تمامًا.</span>
+            </p>
+
+            <div class="bg-blue-50 p-5 rounded-lg shadow-md mb-6 text-center">
+                <p class="text-gray-700 mb-2">
+                    <span class="lang-fr">Avec notre Application vérifiez instantanément la non-toxicité de chaque aliment avant de le partager avec lui.</span>
+                    <span class="lang-ar" lang="ar" dir="rtl">باستخدام تطبيقنا، تحقق فورًا من عدم سمية كل طعام قبل مشاركته مع حيوانك.</span>
+                </p>
+                <div class="space-x-4 mt-3">
+                    <a href="https://natlzhjz.genspark.space/" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                         <span class="lang-fr">Singrafood app.</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">تطبيق Singrafood</span>
+                    </a>
+                    <a href="https://rezbuwuf.genspark.space/" target="_blank" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                         <span class="lang-fr">Singrafood app. Bilingue</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">تطبيق Singrafood ثنائي اللغة</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="toxic-food-card bg-white p-5 rounded-lg shadow-md border-l-4 border-r-4 border-red-500">
+                     <div class="flex items-center mb-3">
+                         <i class="fas fa-skull-crossbones text-red-500 text-xl mr-3 ml-3"></i>
+                        <h3 class="text-lg font-bold text-red-800">
+                            <span class="lang-fr">Chocolat</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">الشوكولاتة</span>
+                         </h3>
+                    </div>
+                     <p class="text-gray-700 text-sm">
+                        <span class="lang-fr">Contient de la théobromine, toxique pour les chiens et les chats. Peut causer des vomissements, diarrhée, hyperactivité, tremblements, convulsions et même la mort.</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">تحتوي على الثيوبرومين، وهو سام للكلاب والقطط. يمكن أن يسبب القيء والإسهال وفرط النشاط والرعشة والتشنجات وحتى الموت.</span>
+                    </p>
+                </div>
+                <div class="toxic-food-card bg-white p-5 rounded-lg shadow-md border-l-4 border-r-4 border-red-500">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-skull-crossbones text-red-500 text-xl mr-3 ml-3"></i>
+                        <h3 class="text-lg font-bold text-red-800">
+                            <span class="lang-fr">Oignons et ail</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">البصل والثوم</span>
+                        </h3>
+                    </div>
+                    <p class="text-gray-700 text-sm">
+                        <span class="lang-fr">Tous les membres de la famille des alliacées peuvent causer une anémie hémolytique chez les chiens et les chats, détruisant leurs globules rouges.</span>
+                        <span class="lang-ar" lang="ar" dir="rtl">جميع أفراد عائلة الثوميات يمكن أن تسبب فقر الدم الانحلالي لدى الكلاب والقطط، مما يؤدي إلى تدمير خلايا الدم الحمراء.</span>
+                    </p>
+                </div>
+                <div class="toxic-food-card bg-white p-5 rounded-lg shadow-md border-l-4 border-r-4 border-red-500">
+                    <div class="flex items-center mb-3">
+                         <i class="fas fa-skull-crossbones text-red-500 text-xl mr-3 ml-3"></i>
+                        <h3 class="text-lg font-bold text-red-800">
+                            <span class="lang-fr">Raisins et raisins secs</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">العنب والزبيب</span>
+                        </h3>
+                    </div>
+                     <p class="text-gray-700 text-sm">
+                        <span class="lang-fr">Peuvent provoquer une insuffisance rénale aiguë chez les chiens, même en petite quantité. Le mécanisme exact de toxicité reste inconnu.</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">يمكن أن تسبب فشل كلوي حاد لدى الكلاب، حتى بكميات صغيرة. الآلية الدقيقة للسمية لا تزال غير معروفة.</span>
+                    </p>
+                </div>
+                <div class="toxic-food-card bg-white p-5 rounded-lg shadow-md border-l-4 border-r-4 border-red-500">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-skull-crossbones text-red-500 text-xl mr-3 ml-3"></i>
+                        <h3 class="text-lg font-bold text-red-800">
+                            <span class="lang-fr">Xylitol</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">الزيليتول</span>
+                        </h3>
+                    </div>
+                     <p class="text-gray-700 text-sm">
+                        <span class="lang-fr">Édulcorant présent dans les chewing-gums sans sucre, pâtisseries et certains beurres de cacahuète. Provoque une hypoglycémie sévère et des lésions hépatiques chez les chiens.</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">مُحلي يوجد في العلكة الخالية من السكر والمعجنات وبعض أنواع زبدة الفول السوداني. يسبب نقصًا حادًا في نسبة السكر في الدم وتلفًا في الكبد لدى الكلاب.</span>
+                    </p>
+                </div>
+                <div class="toxic-food-card bg-white p-5 rounded-lg shadow-md border-l-4 border-r-4 border-red-500">
+                    <div class="flex items-center mb-3">
+                         <i class="fas fa-skull-crossbones text-red-500 text-xl mr-3 ml-3"></i>
+                        <h3 class="text-lg font-bold text-red-800">
+                            <span class="lang-fr">Alcool</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">الكحول</span>
+                        </h3>
+                    </div>
+                     <p class="text-gray-700 text-sm">
+                        <span class="lang-fr">Toxique même en petite quantité, peut causer vomissements, difficultés respiratoires, coma et décès. Les animaux sont beaucoup plus sensibles que les humains.</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">سام حتى بكميات صغيرة، يمكن أن يسبب القيء وصعوبات في التنفس وغيبوبة وموت. الحيوانات أكثر حساسية بكثير من البشر.</span>
+                    </p>
+                </div>
+                <div class="toxic-food-card bg-white p-5 rounded-lg shadow-md border-l-4 border-r-4 border-red-500">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-skull-crossbones text-red-500 text-xl mr-3 ml-3"></i>
+                        <h3 class="text-lg font-bold text-red-800">
+                            <span class="lang-fr">Avocat</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">الأفوكادو</span>
+                        </h3>
+                    </div>
+                     <p class="text-gray-700 text-sm">
+                        <span class="lang-fr">Contient de la persine, une toxine fongique qui peut provoquer des vomissements et de la diarrhée chez les chiens. Plus dangereux pour les oiseaux et autres animaux domestiques.</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">يحتوي على البرسين، وهو سم فطري يمكن أن يسبب القيء والإسهال لدى الكلاب. أكثر خطورة على الطيور والحيوانات الأليفة الأخرى.</span>
+                    </p>
+                </div>
+                 <div class="toxic-food-card bg-white p-5 rounded-lg shadow-md border-l-4 border-r-4 border-red-500">
+                    <div class="flex items-center mb-3">
+                         <i class="fas fa-skull-crossbones text-red-500 text-xl mr-3 ml-3"></i>
+                        <h3 class="text-lg font-bold text-red-800">
+                            <span class="lang-fr">Café et thé</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">القهوة والشاي</span>
+                        </h3>
+                    </div>
+                    <p class="text-gray-700 text-sm">
+                        <span class="lang-fr">Contiennent de la caféine qui peut être fatale pour les animaux domestiques. Cause hyperactivité, rythme cardiaque accéléré, tremblements et convulsions.</span>
+                        <span class="lang-ar" lang="ar" dir="rtl">تحتوي على الكافيين الذي يمكن أن يكون قاتلاً للحيوانات الأليفة. يسبب فرط النشاط وتسارع ضربات القلب والرعشة والتشنجات.</span>
+                    </p>
+                </div>
+                 <div class="toxic-food-card bg-white p-5 rounded-lg shadow-md border-l-4 border-r-4 border-red-500">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-skull-crossbones text-red-500 text-xl mr-3 ml-3"></i>
+                        <h3 class="text-lg font-bold text-red-800">
+                            <span class="lang-fr">Noix de macadamia</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">مكسرات المكاديميا</span>
+                        </h3>
+                    </div>
+                     <p class="text-gray-700 text-sm">
+                        <span class="lang-fr">Toxiques pour les chiens, provoquant faiblesse, hyperthermie, vomissements, tremblements et incapacité à marcher. Les mécanismes exacts restent inconnus.</span>
+                        <span lang="ar" lang="ar" dir="rtl">سامة للكلاب، تسبب الضعف وارتفاع درجة الحرارة والقيء والرعشة وعدم القدرة على المشي. الآليات الدقيقة لا تزال غير معروفة.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-red-50 p-5 rounded-lg shadow-md border-l-4 border-r-4 border-red-600">
+                 <div class="flex items-center mb-3">
+                    <i class="fas fa-exclamation-triangle text-red-600 text-2xl mr-3 ml-3"></i>
+                    <h3 class="text-xl font-bold text-red-800">
+                        <span class="lang-fr">En cas d'ingestion</span>
+                        <span class="lang-ar" lang="ar" dir="rtl">في حالة الابتلاع</span>
+                    </h3>
+                </div>
+                <p class="text-gray-700">
+                     <span class="lang-fr">Si vous suspectez que votre animal a ingéré une substance toxique, contactez immédiatement votre vétérinaire ou le service d'urgence vétérinaire le plus proche. N'attendez pas l'apparition de symptômes, car certaines toxines peuvent causer des dommages irréversibles avant même que les signes cliniques ne soient visibles.</span>
+                     <span class="lang-ar" lang="ar" dir="rtl">إذا كنت تشك في أن حيوانك قد ابتلع مادة سامة، اتصل فورًا بطبيبك البيطري أو بأقرب خدمة طوارئ بيطرية. لا تنتظر ظهور الأعراض، لأن بعض السموم يمكن أن تسبب أضرارًا لا رجعة فيها حتى قبل ظهور العلامات السريرية.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+     <section id="conseils" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+             <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-4">
+                 <span class="lang-fr">Conseils pour nouveaux propriétaires</span>
+                 <span class="lang-ar" lang="ar" dir="rtl">نصائح للمالكين الجدد</span>
+             </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-yellow-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-dog text-yellow-600 text-3xl mr-3 ml-3"></i>
+                        <h3 class="text-xl font-bold text-yellow-800">
+                            <span class="lang-fr">Pour les propriétaires de chiens</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">لمالكي الكلاب</span>
+                        </h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Programme de vaccination</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">برنامج التلاقيح</span>
+                                </span>
+                                <p class="text-sm text-gray-700">
+                                    <span class="lang-fr">Commencez les vaccinations dès 6 semaines et suivez le calendrier recommandé.</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">ابدأ التلاقيح من عمر 6 أسابيع واتبع الجدول الزمني الموصى به.</span>
+                                </p>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                             <i class="fas fa-check-circle text-yellow-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Vermifugation</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">التخلص من الديدان</span>
+                                </span>
+                                <p class="text-sm text-gray-700">
+                                    <span class="lang-fr">Un calendrier de vermifugation personnalisé sera mise au point, pour protéger votre chien contre les vers intestinaux ! La vermifugation régulière est essentielle pour sa santé et celle de votre corps humain.</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">سيتم وضع جدول مخصص للتخلص من الديدان لحماية كلبك من الديدان المعوية! التخلص المنتظم من الديدان ضروري لصحته وصحة جسمك.</span>
+                                </p>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Alimentation</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">التغذية</span>
+                                </span>
+                                <p class="text-sm text-gray-700">
+                                     <span class="lang-fr">On va vous aider à choisir une nourriture adaptée à l'âge, la taille et l'activité de votre chien. Respectez les quantités recommandées.</span>
+                                     <span class="lang-ar" lang="ar" dir="rtl">سنساعدك في اختيار طعام مناسب لعمر وحجم ونشاط كلبك. احترم الكميات الموصى بها.</span>
+                                </p>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Socialisation</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">التنشئة الاجتماعية</span>
+                                </span>
+                                <p class="text-sm text-gray-700">
+                                    <span class="lang-fr">Exposez votre chiot à différentes personnes, animaux et environnements avant 16 semaines pour favoriser un comportement équilibré.</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">عرّض جروك لأشخاص وحيوانات وبيئات مختلفة قبل عمر 16 أسبوعًا لتعزيز سلوك متوازن.</span>
+                                </p>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Éducation</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">التربية</span>
+                                </span>
+                                <p class="text-sm text-gray-700">
+                                    <span class="lang-fr">Commencez l'éducation de base tôt (assis, couché, pas bouger) en utilisant le renforcement positif.</span>
+                                     <span class="lang-ar" lang="ar" dir="rtl">ابدأ التعليم الأساسي مبكرًا (الجلوس، الاستلقاء، البقاء) باستخدام التعزيز الإيجابي.</span>
+                                </p>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Identification</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">التعريف</span>
+                                </span>
+                                <p class="text-sm text-gray-700">
+                                    <span class="lang-fr">Faites identifier votre chien (puce électronique ou tatouage) et assurez-vous qu'il porte un collier avec vos coordonnées.</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">قم بتعريف كلبك (شريحة إلكترونية أو وشم) وتأكد من أنه يرتدي طوقًا بمعلومات الاتصال الخاصة بك.</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cat text-blue-600 text-3xl mr-3 ml-3"></i>
+                        <h3 class="text-xl font-bold text-blue-800">
+                            <span class="lang-fr">Pour les propriétaires de chats</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">لمالكي القطط</span>
+                        </h3>
+                    </div>
+                    <ul class="space-y-3">
+                         <li class="flex items-start">
+                             <i class="fas fa-check-circle text-blue-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Programme de vaccination</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">برنامج التلاقيح</span>
+                                </span>
+                                <p class="text-sm text-gray-700">
+                                    <span class="lang-fr">Commencez les vaccinations dès 8 semaines et respectez les rappels annuels.</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">ابدأ التلاقيح من عمر 8 أسابيع والتزم بالتذكيرات السنوية.</span>
+                                </p>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Vermifugation</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">التخلص من الديدان</span>
+                                </span>
+                                <p class="text-sm text-gray-700">
+                                    <span class="lang-fr">Calendrier de vermifugation personnalisé vous seront donnés selon l'âge, le mode de vie et l'état de santé de votre chat.</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">سيتم إعطاؤك جدولًا مخصصًا للتخلص من الديدان بناءً على عمر قطتك ونمط حياتها وحالتها الصحية.</span>
+                                </p>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                             <i class="fas fa-check-circle text-blue-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Environnement</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">البيئة</span>
+                                </span>
+                                <p class="text-sm text-gray-700">
+                                    <span class="lang-fr">Créez un environnement sécurisé avec des zones en hauteur, des cachettes et des griffoirs. Prévoyez au moins une litière par chat, plus une supplémentaire.</span>
+                                     <span class="lang-ar" lang="ar" dir="rtl">قم بإنشاء بيئة آمنة مع مناطق مرتفعة وأماكن للاختباء وأعمدة خدش. وفر صندوق فضلات واحد على الأقل لكل قط، بالإضافة إلى واحد إضافي.</span>
+                                </p>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Alimentation</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">التغذية</span>
+                                </span>
+                                <p class="text-sm text-gray-700">
+                                    <span class="lang-fr">Privilégiez les aliments spécifiques pour chats riches en protéines animales. Les chats ont besoin d'une alimentation différente de celle des chiens.</span>
+                                     <span class="lang-ar" lang="ar" dir="rtl">فضل الأطعمة المخصصة للقطط الغنية بالبروتينات الحيوانية. تحتاج القطط إلى نظام غذائي مختلف عن الكلاب.</span>
+                                </p>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                             <i class="fas fa-check-circle text-blue-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Stérilisation</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">التعقيم</span>
+                                </span>
+                                <p class="text-sm text-gray-700">
+                                    <span class="lang-fr">Possible à partir de l'âge de 6-7 mois.</span>
+                                     <span class="lang-ar" lang="ar" dir="rtl">ممكن ابتداءً من عمر 6-7 أشهر.</span>
+                                </p>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-2 ml-2"></i>
+                            <div>
+                                <span class="font-semibold block">
+                                    <span class="lang-fr">Identification</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">التعريف</span>
+                                </span>
+                                <p class="text-sm text-gray-700">
+                                    <span class="lang-fr">Faites identifier votre chat par puce électronique, même s'il vit exclusivement à l'intérieur.</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">قم بتعريف قطتك بواسطة شريحة إلكترونية، حتى لو كانت تعيش داخل المنزل حصريًا.</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+             <div class="mt-10 bg-green-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-4 text-green-800">
+                    <span class="lang-fr">Visites préventives</span>
+                    <span class="lang-ar" lang="ar" dir="rtl">الزيارات الوقائية</span>
+                 </h3>
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3">
+                        <p class="text-gray-700 mb-3">
+                             <span class="lang-fr">Les visites préventives régulières sont essentielles pour maintenir la santé de votre animal à long terme. Elles permettent de :</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">الزيارات الوقائية المنتظمة ضرورية للحفاظ على صحة حيوانك على المدى الطويل. فهي تسمح بما يلي:</span>
+                        </p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-circle-right text-green-600 mt-1 mr-2 ml-2"></i>
+                                <span>
+                                    <span class="lang-fr">Détecter précocement des problèmes de santé avant qu'ils ne deviennent graves</span>
+                                     <span class="lang-ar" lang="ar" dir="rtl">الكشف المبكر عن المشاكل الصحية قبل أن تصبح خطيرة</span>
+                                </span>
+                            </li>
+                             <li class="flex items-start">
+                                <i class="fas fa-arrow-circle-right text-green-600 mt-1 mr-2 ml-2"></i>
+                                <span>
+                                    <span class="lang-fr">Maintenir à jour les vaccinations et traitements antiparasitaires</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">الحفاظ على تحديث التلاقيح وعلاجات الطفيليات</span>
+                                </span>
+                            </li>
+                             <li class="flex items-start">
+                                <i class="fas fa-arrow-circle-right text-green-600 mt-1 mr-2 ml-2"></i>
+                                <span>
+                                    <span class="lang-fr">Surveiller le poids et adapter l'alimentation si nécessaire</span>
+                                    <span class="lang-ar" lang="ar" dir="rtl">مراقبة الوزن وتكييف النظام الغذائي إذا لزم الأمر</span>
+                                </span>
+                            </li>
+                             <li class="flex items-start">
+                                <i class="fas fa-arrow-circle-right text-green-600 mt-1 mr-2 ml-2"></i>
+                                <span>
+                                    <span class="lang-fr">Répondre à vos questions sur le comportement ou les soins quotidiens</span>
+                                     <span class="lang-ar" lang="ar" dir="rtl">الإجابة على أسئلتكم حول السلوك أو الرعاية اليومية</span>
+                                </span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-700 mt-3">
+                            <span class="lang-fr">Nous recommandons au minimum une visite annuelle pour les animaux adultes en bonne santé, et des contrôles plus fréquents pour les jeunes, les seniors ou les animaux souffrant de maladies chroniques.</span>
+                             <span class="lang-ar" lang="ar" dir="rtl">نوصي بزيارة سنوية واحدة على الأقل للحيوانات البالغة بصحة جيدة، وفحوصات أكثر تكرارًا للصغار وكبار السن أو الحيوانات التي تعاني من أمراض مزمنة.</span>
+                        </p>
+                    </div>
+                     <div class="md:w-1/3 text-center mt-4 md:mt-0">
+                        <i class="fas fa-calendar-check text-green-600 text-6xl mb-3"></i>
+                        <p class="font-bold text-green-800">
+                            <span class="lang-fr">Planifiez votre prochaine visite préventive</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">خطط لزيارتك الوقائية القادمة</span>
+                        </p>
+                        <a href="#contact" class="inline-block mt-3 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition duration-300">
+                            <span class="lang-fr">Prendre rendez-vous</span>
+                             <span class="lang-ar" lang="ar" dir="rtl">حجز موعد</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 section-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-4">
+                <span class="lang-fr">Notre réseau de référence</span>
+                <span class="lang-ar" lang="ar" dir="rtl">شبكة الإحالة الخاصة بنا</span>
+            </h2>
+             <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                <span class="lang-fr">Nous collaborons avec un réseau de vétérinaires partenaires experts dans leurs domaines.</span>
+                 <span class="lang-ar" lang="ar" dir="rtl">نتعاون مع شبكة من الأطباء البيطريين الشركاء الخبراء في مجالاتهم.</span>
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                 <div class="bg-white p-5 rounded-lg shadow-md text-center">
+                    <div class="text-purple-600 text-3xl mb-4"><i class="fas fa-cut"></i></div>
+                    <h3 class="text-lg font-bold text-purple-800 mb-3">
+                        <span class="lang-fr">Chirurgie</span>
+                        <span class="lang-ar" lang="ar" dir="rtl">الجراحة</span>
+                     </h3>
+                </div>
+
+                 <div class="bg-white p-5 rounded-lg shadow-md text-center">
+                     <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-procedures"></i></div>
+                    <h3 class="text-lg font-bold text-blue-800 mb-3">
+                        <span class="lang-fr">Hospitalisation</span>
+                        <span class="lang-ar" lang="ar" dir="rtl">الاستشفاء</span>
+                    </h3>
+                </div>
+
+                 <div class="bg-white p-5 rounded-lg shadow-md text-center">
+                    <div class="text-pink-600 text-3xl mb-4"><i class="fas fa-bath"></i></div>
+                    <h3 class="text-lg font-bold text-pink-800 mb-3">
+                         <span class="lang-fr">Toilettage</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">العناية والنظافة</span>
+                    </h3>
+                </div>
+            </div>
+
+             <div class="mt-8 bg-indigo-50 p-6 rounded-lg shadow-md">
+                <div class="flex flex-col md:flex-row items-center">
+                     <div class="md:w-3/4 pr-0 md:pr-6 md:pl-6">
+                        <h3 class="text-xl font-bold mb-3 text-indigo-800">
+                            <span class="lang-fr">Suivi coordonné</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">المتابعة المنسقة</span>
+                        </h3>
+                        <p class="text-gray-700 mb-3">
+                            <span class="lang-fr">Même lorsque votre animal est pris en charge par un spécialiste de notre réseau, nous restons votre interlocuteur principal pour assurer un suivi cohérent et personnalisé.</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">حتى عندما يتولى متخصص من شبكتنا رعاية حيوانك، نظل جهة الاتصال الرئيسية لضمان متابعة متسقة وشخصية.</span>
+                        </p>
+                         <p class="text-gray-700">
+                             <span class="lang-fr">Nous travaillons en étroite collaboration avec nos partenaires pour garantir la continuité des soins et vous offrir une prise en charge optimale, quelle que soit la problématique de santé de votre compagnon.</span>
+                             <span class="lang-ar" lang="ar" dir="rtl">نعمل بتعاون وثيق مع شركائنا لضمان استمرارية الرعاية وتقديم أفضل رعاية ممكنة، بغض النظر عن مشكلة صحة رفيقك.</span>
+                        </p>
+                    </div>
+                    <div class="md:w-1/4 mt-4 md:mt-0 text-center">
+                        <i class="fas fa-handshake text-indigo-600 text-6xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
+                <span class="lang-fr">Contactez-nous</span>
+                <span class="lang-ar" lang="ar" dir="rtl">اتصل بنا</span>
+            </h2>
+
+            <div class="flex flex-col md:flex-row">
+                 <div class="md:w-1/2 pr-0 md:pr-8 md:pl-8 mb-8 md:mb-0">
+                     <div class="bg-blue-50 p-6 rounded-lg shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-4">
+                            <span class="lang-fr">Rendez-vous</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">المواعيد</span>
+                        </h3>
+
+                        <div class="space-y-4">
+                            <div class="contact-highlight">
+                                 <p class="text-gray-700">
+                                     <span class="lang-fr">Ne perdez plus votre temps et ne causez pas une souffrance inutile à votre compagnon en passant un temps précieux à attendre à côté d'autres animaux qui pourraient devenir agressifs à son encontre! Avec nous toutes les consultations sont sur rendez-vous.</span>
+                                     <span class="lang-ar" lang="ar" dir="rtl">لا تضيع وقتك ولا تسبب معاناة غير ضرورية لرفيقك بقضاء وقت ثمين في الانتظار بجانب حيوانات أخرى قد تصبح عدوانية تجاهه! معنا جميع الاستشارات تتم بموعد مسبق.</span>
+                                </p>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="text-blue-600 text-xl mr-4 ml-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-blue-800">
+                                        <span class="lang-fr">Adresse</span>
+                                        <span class="lang-ar" lang="ar" dir="rtl">العنوان</span>
+                                     </p>
+                                    <p class="text-gray-700">
+                                        <span class="lang-fr">13, Avenue Mohamed El Marzouki, El Mourouj 1, 2074, Ben Arous, Tunisie</span>
+                                        <span class="lang-ar" lang="ar" dir="rtl">13، شارع محمد المرزوقي، المروج 1، 2074، بن عروس، تونس</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                 <div class="text-blue-600 text-xl mr-4 ml-4 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-blue-800">
+                                        <span class="lang-fr">Téléphone</span>
+                                        <span class="lang-ar" lang="ar" dir="rtl">الهاتف</span>
+                                    </p>
+                                     <p class="text-gray-700" dir="ltr">+216 50 166 018</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="text-blue-600 text-xl mr-4 ml-4 mt-1">
+                                    <i class="fas fa-facebook-f"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-blue-800">
+                                        <span class="lang-fr">Facebook</span>
+                                        <span class="lang-ar" lang="ar" dir="rtl">فيسبوك</span>
+                                    </p>
+                                    <a href="https://www.facebook.com/mouroujveto" target="_blank" class="text-blue-600 hover:underline">www.facebook.com/mouroujveto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-4">
+                            <span class="lang-fr">Notre localisation</span>
+                            <span class="lang-ar" lang="ar" dir="rtl">موقعنا</span>
+                         </h3>
+                        <div class="rounded-lg overflow-hidden h-80 mb-4">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.101302368918!2d10.196971615617596!3d36.71987897996463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd30b29ef3e833%3A0x7a3a19c8b763e6a8!2sCabinet%20V%C3%A9t%C3%A9rinaire%20Mouroujveto%20Dr%20Trad%20Mohamed%20Nizar!5e0!3m2!1sen!2stn!4v1678886432123!5m2!1sen!2stn" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                         <div class="space-y-3">
+                            <p class="text-gray-700"><i class="fas fa-info-circle text-blue-600 mr-2 ml-2"></i>
+                                <span class="lang-fr">Situé à proximité de la pharmacie Lotfi Saiidi et en face de la Brocante de Tarek El Chikhaoui</span>
+                                <span class="lang-ar" lang="ar" dir="rtl">يقع بالقرب من صيدلية لطفي السعيدي ومقابل بروكانت طارق الشيخاوي</span>
+                             </p>
+                            <p class="text-gray-700"><i class="fas fa-car text-blue-600 mr-2 ml-2"></i>
+                                <span class="lang-fr">Stationnement facile à proximité</span>
+                                <span class="lang-ar" lang="ar" dir="rtl">سهولة ركن السيارات في الجوار</span>
+                             </p>
+                            <p class="text-gray-700"><i class="fas fa-directions text-blue-600 mr-2 ml-2"></i>
+                                <span class="lang-fr">Repères: à côté de l'avenue principale d'El Mourouj 1</span>
+                                <span class="lang-ar" lang="ar" dir="rtl">نقاط مرجعية: بجانب الشارع الرئيسي للمروج 1</span>
+                            </p>
+                        </div>
+                        <div class="mt-6">
+                            <a href="https://goo.gl/maps/bLZJQJsHsdY6RLUr9" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                                <i class="fas fa-directions mr-2 ml-2"></i>
+                                <span class="lang-fr">Itinéraire via Google Maps</span>
+                                <span class="lang-ar" lang="ar" dir="rtl">الاتجاهات عبر خرائط جوجل</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-900 text-white py-10">
+        <div class="container mx-auto px-4">
+             <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0 md:w-1/3">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-paw text-3xl mr-2 ml-2"></i>
+                        <span class="text-xl font-bold">
+                            <span class="lang-fr">Cabinet Vétérinaire Mouroujveto</span>
+                             <span class="lang-ar" lang="ar" dir="rtl">عيادة المروج البيطرية</span>
+                        </span>
+                    </div>
+                    <p class="text-sm text-blue-200">
+                         <span class="lang-fr">Dr Trad Mohamed Nizar - Médecin vétérinaire dédié à la médecine canine et féline et à l'innovation grâce à la recherche scientifique. Membre de l'Association Tunisienne de la recherche scientifique (Atrsipi) et Toutes mes études ont été faites à l'ENMV DE Notre Chère Tunisie.</span>
+                        <span class="lang-ar" lang="ar" dir="rtl">دكتور طراد محمد نزار - طبيب بيطري مكرس لطب الكلاب والقطط والابتكار من خلال البحث العلمي. عضو في الجمعية التونسية للبحث العلمي (Atrsipi) وجميع دراساتي تمت في المدرسة الوطنية للطب البيطري في تونسنا العزيزة.</span>
+                    </p>
+                </div>
+
+                <div class="mb-6 md:mb-0">
+                     <h4 class="text-lg font-bold mb-4">
+                         <span class="lang-fr">Liens rapides</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">روابط سريعة</span>
+                     </h4>
+                     <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-blue-200 hover:text-white transition duration-300"><span class="lang-fr">Accueil</span><span class="lang-ar" lang="ar" dir="rtl">الرئيسية</span></a></li>
+                        <li><a href="#expertise" class="text-blue-200 hover:text-white transition duration-300"><span class="lang-fr">Notre expertise</span><span class="lang-ar" lang="ar" dir="rtl">خبرتنا</span></a></li>
+                        <li><a href="#services" class="text-blue-200 hover:text-white transition duration-300"><span class="lang-fr">Services</span><span class="lang-ar" lang="ar" dir="rtl">خدماتنا</span></a></li>
+                        <li><a href="#contact" class="text-blue-200 hover:text-white transition duration-300"><span class="lang-fr">Contact et horaires</span><span class="lang-ar" lang="ar" dir="rtl">الاتصال والمواعيد</span></a></li>
+                    </ul>
+                </div>
+
+                 <div class="mb-6 md:mb-0">
+                     <h4 class="text-lg font-bold mb-4">
+                         <span class="lang-fr">Informations utiles</span>
+                         <span class="lang-ar" lang="ar" dir="rtl">معلومات مفيدة</span>
+                    </h4>
+                    <ul class="space-y-2">
+                        <li><a href="#vaccinations" class="text-blue-200 hover:text-white transition duration-300"><span class="lang-fr">Vaccinations</span><span class="lang-ar" lang="ar" dir="rtl">التلاقيح</span></a></li>
+                        <li><a href="#aliments-toxiques" class="text-blue-200 hover:text-white transition duration-300"><span class="lang-fr">Aliments toxiques</span><span class="lang-ar" lang="ar" dir="rtl">الأطعمة السامة</span></a></li>
+                        <li><a href="#conseils" class="text-blue-200 hover:text-white transition duration-300"><span class="lang-fr">Conseils propriétaires</span><span class="lang-ar" lang="ar" dir="rtl">نصائح للمالكين</span></a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">
+                        <span class="lang-fr">Suivez-nous</span>
+                        <span class="lang-ar" lang="ar" dir="rtl">تابعنا</span>
+                    </h4>
+                    <a href="https://www.facebook.com/mouroujveto" target="_blank" class="inline-block bg-blue-800 hover:bg-blue-700 p-3 rounded-full transition duration-300">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center text-blue-300">
+                <p>
+                    <span class="lang-fr">© 2025 Cabinet Vétérinaire Mouroujveto - Dr Trad Mohamed Nizar. Tous droits réservés.</span>
+                    <span class="lang-ar" lang="ar" dir="rtl">© 2025 عيادة المروج البيطرية - دكتور طراد محمد نزار. كل الحقوق محفوظة.</span>
+                 </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Language Switching Logic ---
+        const htmlTag = document.documentElement;
+        const langButtons = document.querySelectorAll('.lang-switcher button');
+        const titleTag = document.querySelector('title');
+
+        const frTitle = "Cabinet Vétérinaire Mouroujveto - Dr Trad Mohamed Nizar";
+        const arTitle = "عيادة المروج البيطرية - دكتور طراد محمد نزار";
+
+        function switchLanguage(targetLang) {
+            // Update html tag attributes
+            htmlTag.lang = targetLang;
+            htmlTag.dir = targetLang === 'ar' ? 'rtl' : 'ltr';
+
+             // Update page title
+             titleTag.textContent = targetLang === 'ar' ? arTitle : frTitle;
+
+            // Update button active states
+            langButtons.forEach(button => {
+                if (button.dataset.lang === targetLang) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+
+            // Save preference to localStorage
+            try {
+                localStorage.setItem('preferredLang', targetLang);
+            } catch (e) {
+                console.warn("Could not save language preference to localStorage:", e);
+            }
+
+             // Force reflow/repaint for smoother visual update if needed (sometimes helps)
+             // document.body.style.opacity = '0';
+             // setTimeout(() => { document.body.style.opacity = '1'; }, 50);
+        }
+
+        // Add event listeners to buttons
+        langButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetLang = button.dataset.lang;
+                switchLanguage(targetLang);
+            });
+        });
+
+        // On page load, check localStorage for saved preference
+        document.addEventListener('DOMContentLoaded', () => {
+            let preferredLang = 'fr'; // Default language
+            try {
+                const savedLang = localStorage.getItem('preferredLang');
+                 if (savedLang && (savedLang === 'fr' || savedLang === 'ar')) {
+                     preferredLang = savedLang;
+                 }
+             } catch (e) {
+                 console.warn("Could not read language preference from localStorage:", e);
+             }
+            switchLanguage(preferredLang);
+        });
+
+        // --- Mobile Menu Toggle ---
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
